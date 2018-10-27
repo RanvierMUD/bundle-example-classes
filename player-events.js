@@ -2,8 +2,8 @@
 
 const humanize = (sec) => { return require('humanize-duration')(sec, { round: true }); };
 const { Broadcast: B, Logger, SkillErrors } = require('ranvier');
-const Combat = require('../ranvier-combat/lib/Combat');
-const CombatErrors = require('../ranvier-combat/lib/CombatErrors');
+const Combat = require('../bundle-example-combat/lib/Combat');
+const CombatErrors = require('../bundle-example-combat/lib/CombatErrors');
 
 module.exports = {
   listeners: {
