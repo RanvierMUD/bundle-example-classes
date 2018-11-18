@@ -3,7 +3,7 @@
 const { Broadcast, Damage, SkillType } = require('ranvier');
 
 const damagePercent = 100;
-const manaCost = 20;
+const manaCost = 80;
 
 function getDamage(player) {
   return player.getAttribute('intellect') * (damagePercent / 100);

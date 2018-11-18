@@ -1,0 +1,9 @@
+{
+  "private": true,
+  "name": "bundle-example-classes",
+  "version": "1.0.0",
+  "description": "",
+  "dependencies": {
+    "humanize-duration": "^3.15.3"
+  }
+}

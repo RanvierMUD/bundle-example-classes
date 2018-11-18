@@ -18,8 +18,9 @@ module.exports = {
    10: { skills: ['secondwind'] },
   },
 
-  setupPlayer: player => {
-    player.addAttribute('energy', 100);
+  setupPlayer: (state, player) => {
+    const energy = state.AttributeFactory.create('energy', 100);
+    player.addAttribute(energy);
     player.prompt = '[ %health.current%/%health.max% <b>hp</b> %energy.current%/%energy.max% <b>energy</b> ]';
   }
 };
