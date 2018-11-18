@@ -6,7 +6,7 @@ module.exports = [
     base: 100,
     formula: {
       requires: ['intellect'],
-      fn: state => function (character, mana, intellect) {
+      fn: function (character, mana, intellect) {
         return mana + (intellect * 10);
       }
     },
