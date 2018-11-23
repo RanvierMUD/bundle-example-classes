@@ -4,7 +4,6 @@ const { Broadcast, SkillType } = require('ranvier');
 const Combat = require('../../bundle-example-combat/lib/Combat');
 
 // config placed here just for easy copy/paste of this skill later on
-const attribute = 'strength';
 const cooldown = 10;
 const cost = 50;
 const duration = 20 * 1000;
