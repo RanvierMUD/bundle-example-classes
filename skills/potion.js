@@ -12,7 +12,6 @@ module.exports = {
   targetSelf: true,
 
   run: state => function (args, player) {
-    const restorePercent = this.options.restore || 0;
     const stat = this.options.stat || 'health';
     const heal = new Heal({
       attribute: stat,
