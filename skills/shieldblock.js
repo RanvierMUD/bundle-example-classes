@@ -3,7 +3,6 @@
 const { Broadcast, SkillType } = require('ranvier');
 
 // config placed here just for easy configuration of this skill later on
-const attribute = 'strength';
 const cooldown = 45;
 const cost = 50;
 const healthPercent = 15;
