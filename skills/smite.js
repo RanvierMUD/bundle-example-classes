@@ -1,7 +1,7 @@
 'use strict';
 
 const { Broadcast, Damage } = require('ranvier');
-const Combat = require('../../bundle-example-combat/lib/Combat');
+const Combat = require('@bundles/bundle-example-combat/lib/Combat');
 
 const cooldown = 10;
 const damagePercent = 350;
