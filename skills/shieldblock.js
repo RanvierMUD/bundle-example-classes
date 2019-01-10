@@ -29,7 +29,6 @@ module.exports = {
 
     const effect = state.EffectFactory.create(
       'skill.shieldblock',
-      player,
       {
         duration,
         description: this.info(player),

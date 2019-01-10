@@ -18,7 +18,7 @@ module.exports = {
   cooldown,
 
   run: state => function (args, player, target) {
-    const effect = state.EffectFactory.create('skill.judge', target, {}, { reductionPercent });
+    const effect = state.EffectFactory.create('skill.judge', {}, { reductionPercent });
     effect.skill = this;
     effect.attacker = player;
 

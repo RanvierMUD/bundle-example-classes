@@ -32,7 +32,6 @@ module.exports = {
   run: state => function (args, player, target) {
     const effect = state.EffectFactory.create(
       'skill.rend',
-      target,
       {
         duration,
         description: this.info(player),
