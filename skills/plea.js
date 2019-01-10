@@ -28,12 +28,7 @@ module.exports = {
       amount *= 2;
     }
 
-    const heal = new Heal({
-      attribute: 'health',
-      amount,
-      attacker: target === player ? null : player,
-      source: this
-    });
+    const heal = new Heal('health', amount, player, this);
 
     if (target !== player) {
       Broadcast.sayAt(player, `<b>You call upon to the light to heal ${target.name}'s wounds.</b>`);

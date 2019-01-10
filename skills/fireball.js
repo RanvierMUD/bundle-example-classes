@@ -24,12 +24,8 @@ module.exports = {
   cooldown: 10,
 
   run: state => function (args, player, target) {
-    const damage = new Damage({
-      attribute: 'health',
-      amount: getDamage(player),
-      attacker: player,
+    const damage = new Damage('health', getDamage(player), player, this, {
       type: 'physical',
-      source: this
     });
 
     Broadcast.sayAt(player, '<bold>With a wave of your hand, you unleash a <red>fire</red></bold><yellow>b<bold>all</bold></yellow> <bold>at your target!</bold>');

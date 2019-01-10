@@ -22,12 +22,10 @@ module.exports = {
       return Broadcast.sayAt(player, "You don't have a weapon equipped.");
     }
 
-    const damage = new Damage({
-      attribute: 'health',
-      amount: Combat.calculateWeaponDamage(player) * (damagePercent / 100),
-      attacker: player,
+    const amount = Combat.calculateWeaponDamage(player) * (damagePercent / 100);
+
+    const damage = new Damage('health', amount, player, this, {
       type: 'holy',
-      source: this
     });
 
     Broadcast.sayAt(player, `<b><yellow>Your weapon radiates holy energy and you strike ${target.name}!</yellow></b>`);

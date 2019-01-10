@@ -29,10 +29,7 @@ module.exports = {
     updateTick: function () {
       const amount = Math.round(this.state.totalDamage / Math.round((this.config.duration / 1000) / this.config.tickInterval));
 
-      const damage = new Damage({
-        attribute: "health",
-        amount,
-        attacker: this.attacker,
+      const damage = new Damage("health", amount, this.attacker, {
         source: this
       });
       damage.commit(this.target);

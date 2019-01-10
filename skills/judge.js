@@ -22,19 +22,12 @@ module.exports = {
     effect.skill = this;
     effect.attacker = player;
 
-    const damage = new Damage({
-      attribute: 'health',
-      amount: Combat.calculateWeaponDamage(player) * (damagePercent / 100),
-      attacker: player,
+    const amount = Combat.calculateWeaponDamage(player) * (damagePercent / 100);
+    const damage = new Damage('health', amount, player, this, {
       type: 'holy',
-      source: this
     });
 
-    const favorRestore = new Heal({
-      attribute: 'favor',
-      amount: favorAmount,
-      source: this
-    });
+    const favorRestore = new Heal('favor', favorAmount, player, this);
 
     Broadcast.sayAt(player, `<b><yellow>Concentrated holy energy slams into ${target.name}!</yellow></b>`);
     Broadcast.sayAtExcept(player.room, `<b><yellow>${player.name} conjures concentrated holy energy and slams it into ${target.name}!</yellow></b>`, [target, player]);

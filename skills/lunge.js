@@ -25,12 +25,8 @@ module.exports = {
   cooldown: 6,
 
   run: state => function (args, player, target) {
-    const damage = new Damage({
-      attribute: 'health',
-      amount: getDamage(player),
-      attacker: player,
+    const damage = new Damage('health', getDamage(player), player, this, {
       type: 'physical',
-      source: this
     });
 
     Broadcast.sayAt(player, '<red>You shift your feet and let loose a mighty attack!</red>');

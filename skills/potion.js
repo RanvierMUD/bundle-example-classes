@@ -13,12 +13,8 @@ module.exports = {
 
   run: state => function (args, player) {
     const stat = this.options.stat || 'health';
-    const heal = new Heal({
-      attribute: stat,
-      amount: Math.round(player.getMaxAttribute('health') * (this.options.restores / 100)),
-      attacker: player,
-      source: this
-    });
+    const amount = Math.round(player.getMaxAttribute('health') * (this.options.restores / 100));
+    const heal = new Heal(stat, amount, player, this);
 
     Broadcast.sayAt(player, `<bold>You drink the potion and a warm feeling fills your body.</bold>`);
     heal.commit(player);

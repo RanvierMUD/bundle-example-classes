@@ -25,12 +25,7 @@ module.exports = {
   cooldown: 10,
 
   run: state => function (args, player, target) {
-    const heal = new Heal({
-      attribute: 'health',
-      amount: getHeal(player),
-      attacker: player,
-      source: this
-    });
+    const heal = new Heal('health', getHeal(player), player, this);
 
     if (target !== player) {
       B.sayAt(player, `<b>You call upon to the light to heal ${target.name}'s wounds.</b>`);
