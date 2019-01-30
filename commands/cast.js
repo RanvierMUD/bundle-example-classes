@@ -22,6 +22,6 @@ module.exports = {
         player.emit('useAbility', spell, targetArgs);
       },
       label: `cast ${args}`,
-    }, spell.lag !== null ? spell.lag : (state.Config.get('skillLag') || 1000));
+    }, spell.lag !== undefined ? spell.lag : (state.Config.get('skillLag') || 1000));
   }
 };
