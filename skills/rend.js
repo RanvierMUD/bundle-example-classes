@@ -1,7 +1,7 @@
 'use strict';
 
 const { Broadcast, SkillType } = require('ranvier');
-const Combat = require('@bundles/bundle-example-combat/lib/Combat');
+const Combat = require('../../bundle-example-combat/lib/Combat');
 
 // config placed here just for easy copy/paste of this skill later on
 const cooldown = 10;
