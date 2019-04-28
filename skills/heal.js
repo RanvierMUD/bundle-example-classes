@@ -23,6 +23,7 @@ module.exports = {
     cost: energyCost,
   },
   cooldown: 10,
+  lag: 1000,
 
   run: state => function (args, player, target) {
     const heal = new Heal('health', getHeal(player), player, this);
